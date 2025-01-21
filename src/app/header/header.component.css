@@ -51,10 +51,10 @@ header {
     }
   }
 
-  .highlighted {
+  /* .highlighted {
     background-color: lightblue;
     border: 2px solid blue;
     padding: 20px;
     transition: all 0.3s ease;
-  }
+  } */
   

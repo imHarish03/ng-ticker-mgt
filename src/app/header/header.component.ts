@@ -11,16 +11,16 @@ import { ButtonComponent } from "../shared/button/button.component";
 })
 export class HeaderComponent {
 
-  @HostBinding('class.highlighted') isHighlighted = false;
+  // @HostBinding('class.highlighted') isHighlighted = false;
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.isHighlighted = true;
-    console.log('Mouse entered component');
-  }
+  // @HostListener('mouseenter') onMouseEnter() {
+  //   this.isHighlighted = true;
+  //   console.log('Mouse entered component');
+  // }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    this.isHighlighted = false;
-    console.log('Mouse left component');
-  }
+  // @HostListener('mouseleave') onMouseLeave() {
+  //   this.isHighlighted = false;
+  //   console.log('Mouse left component');
+  // }
 
 }
