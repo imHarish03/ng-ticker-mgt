@@ -13,11 +13,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewTicketComponent {
 
-  titile!:string;
-  request!:string;
-
-onSubmit() {
-  console.log("Submitted"+this.titile+"-"+this.request);
+onSubmit(titleInput:HTMLInputElement) {
+  console.log("Submitted"+titleInput);
 }
 
 }
