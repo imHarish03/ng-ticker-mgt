@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, viewChild, ViewChild } from '@angular/core';
 import { ButtonComponent } from "../../../shared/button/button.component";
 import { ControlComponent } from "../../../shared/control/control.component";
 import { FormsModule } from '@angular/forms';
@@ -13,11 +13,16 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewTicketComponent {
 
-@ViewChild('form') form?:ElementRef<HTMLFormElement>;
+//@ViewChild('form') form?:ElementRef<HTMLFormElement>;
+@ViewChild('titleInput') title?:ElementRef<string>;
+
+private form=viewChild.required<ElementRef<HTMLFormElement>>('form');
 
 onSubmit(titleInput:string, requestInput:string) {
-  console.log("Submitted"+titleInput+", Request: "+requestInput);
-  this.form?.nativeElement.reset();
+  console.log("Submitted Title: "+titleInput+", Request: "+requestInput);
+  console.log("Titile loaded via viewchild: "+this.title?.nativeElement);
+  //this.form?.nativeElement.reset();
+   this.form().nativeElement.reset();
 }
 
 }
