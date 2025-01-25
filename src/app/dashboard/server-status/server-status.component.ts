@@ -24,7 +24,7 @@ export class ServerStatusComponent implements OnInit, OnDestroy {
     console.log('ON INIT');
     this.interval = setInterval(() => {
       const rnd = Math.random();
-      console.log("Random Generated: " + rnd);
+      //console.log("Random Generated: " + rnd);
 
       if (rnd < 0.5) {
         this.currentStatus = "online";
@@ -38,7 +38,7 @@ export class ServerStatusComponent implements OnInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    console.log("After View Init");
+    //console.log("After View Init");
   }
 
 
